@@ -34,13 +34,12 @@
 		array_push($_SESSION['macart'], $_SESSION['user_id'].'_'.$_GET['id']);
 		header('location: index.php');
 	}
-	// print_r($_SESSION['products_list_'.$_SESSION['user_id']][0]['id']);
+
 	if (!empty($_GET['id_prod'])) {
 		for ($i=0; $i < count($_SESSION['products_list_'.$_SESSION['user_id']]); $i++) { 
 			if ($_SESSION['products_list_'.$_SESSION['user_id']][$i]['id'] === $_GET['id_prod']) {
 				unset($_SESSION['products_list_'.$_SESSION['user_id']][$i]['qty']);
 				$_SESSION['products_list_'.$_SESSION['user_id']][$i]['qty'] = 0;
-				// print_r($_SESSION['products_list_'.$_SESSION['user_id']][$i]['qty']);
 			}
 		}
 	}
@@ -51,32 +50,6 @@
 		echo json_encode($varray);
 	}
 	
-	// if (!empty($_SESSION['user_id'])) {
-	// 	$check = 0;
-
-	// 	for ($i=0; $i < count($_SESSION['users_id']); $i++) { 
-	// 		if ($_SESSION['user_id'] === $_SESSION['users_id'][$i]) {
-	// 			$check++;
-	// 		} 
-	// 	}
-	// 	if ($check === 0) {
-	// 		$_SESSION['users_id'] = $_SESSION['user_id'];
-	// 	}
-
-	// 	$get_user_id = $_SESSION['user_id'];
-
-	// 	// array_push($_SESSION['users_id'][$get_user_id], $_SESSION['macart']);
-	// 	array_push($_SESSION['container'], $_SESSION['users_id']);
-	// }
-	
-
-
-		
-		// echo count($_SESSION['macart']);
-		// var_dump($_SESSION['user_id']);
-		// session_destroy();
-	
-		// unset($_SESSION['products_list_'.$_SESSION['user_id']]);
 ?>
 <!DOCTYPE html>
 <html lang="en">

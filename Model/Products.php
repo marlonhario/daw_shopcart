@@ -78,6 +78,39 @@
 			return $stmt;
 		}
 
+		//Get Products
+		public function transaction_history() {
+			//Create query
+			$query = 'SELECT 
+						  uc.id,
+						  uc.product_id,
+						  uc.user_id,
+						  p.product_name,
+						  p.price,
+						  uc.product_quantity,
+						  uc.shipping_name AS shipp_price,
+						  sf.shipping_name AS shipp_name,
+						  uc.total_pay,
+						  uc.created_at 
+						FROM
+						  user_cart AS uc 
+						  LEFT JOIN products AS p 
+						    ON uc.product_id = p.id 
+						  LEFT JOIN USER AS us 
+						    ON uc.user_id = us.id 
+						  LEFT JOIN shipping_fee AS sf 
+						    ON uc.shipping_name = sf.amount 
+						ORDER BY uc.created_at DESC ';
+
+			//Prepare statement
+			$stmt = $this->conn->prepare($query);
+
+			//Execute query
+			$stmt->execute();
+
+			return $stmt;
+		}
+
 		//Create Product
 		public function create() {
 			//Create query

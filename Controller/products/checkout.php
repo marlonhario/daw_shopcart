@@ -69,15 +69,5 @@
 	echo json_encode(
 				array('message' => 'Not Created')
 			);
-// echo json_encode(
-// 				array('message' => $wrap_arr[$l]['id'])
-// 			);
-	
-	// $product_car = array();
-	// array_push($product_car, $_SESSION['products_list_'.$_SESSION['user_id']]);
-	// echo json_encode(
-	// 		array('message' => $product_car)
-	// 	);
-	
 
 ?>

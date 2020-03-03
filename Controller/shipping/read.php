@@ -40,7 +40,4 @@
 			array('messsage' => 'No Shipping Found')
 		);
 	}
-	// echo json_encode(
-	// 		array('messsage' => $num_ship)
-	// 	);
 ?>

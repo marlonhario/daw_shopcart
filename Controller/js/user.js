@@ -1,37 +1,5 @@
 $(document).ready(function(){
 	
-
-
-	 // create user ======================================
-
-   //  $( "#signup_register" ).on( "click", function(event){
-   //  	event.preventDefault();
-   //     $.ajax({
-   //         url: "Controller/users/create.php",
-   //         type: "POST",
-   //         async: false,
-   //         data: {
-   //             signup_first_name: $("#signup_first_name").val(),
-   //             signup_last_name: $("#signup_last_name").val(),
-   //             signup_username: $("#signup_username").val(),
-   //             signup_email: $("#signup_email").val(),
-   //             signup_password: $("#signup_password").val(),
-   //             signup_password_confirmation: $("#signup_password_confirmation").val(),
-   //         },
-   //         dataType: "JSON",
-   //         success: function (datas) {
-   //             if (datas !== null) {
-   //                if (datas === 1) {
-   //                  window.location.replace("index.php");
-   //                } else {
-   //                  $(".display_log_err").html(datas);
-   //                  $("#log_err").show().delay(3000).fadeOut();
-   //                }
-   //             }
-   //             console.log(datas);
-   //         }
-   //     });
-   // });
     $(document).on("click","#signup_register", function (e) {
       e.preventDefault();
        $.ajax({

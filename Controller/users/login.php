@@ -17,9 +17,6 @@
 	
 	$user->username = $username_log;
 	
-	// if (!empty($username_log) && !empty($password_log)) {
-		
-		
 
 	// 	// Get user
 		$user->read_single();
@@ -51,15 +48,6 @@
 		} else {
 			echo json_encode('Make sure to fill all fields!.');
 		}
-		
-		
-		// if ($check_pass) {
-		// 	header('location:../../');
-		// 	echo json_encode('check password');
-		// } else {
-		// 	echo json_encode('wrong password');
-		// }
-		
 		
 	
 		
